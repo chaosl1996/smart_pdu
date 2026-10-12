@@ -1,0 +1,34 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Smart PDU",
+        "description": "Home Assistant listens on a TCP port and the PDU device connects in as a client (same as the tcp-in listen node in Node-RED). Make sure the PDU points to this machine's IP.",
+        "data": {
+          "port": "Listen port",
+          "update_interval": "Polling interval (seconds)",
+          "outlet_bit_order": "Outlet bit order (mapping between io8/io bitmask and outlet number)"
+        }
+      }
+    },
+    "error": {
+      "port_in_use": "Port already in use (check whether Node-RED is still listening on it)",
+      "unknown": "Unknown error"
+    },
+    "abort": {
+      "already_configured": "This port is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Smart PDU options",
+        "data": {
+          "port": "Listen port",
+          "update_interval": "Polling interval (seconds)",
+          "outlet_bit_order": "Outlet bit order"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "domain": "smart_pdu",
+  "name": "Smart PDU",
+  "version": "2.1.0",
+  "documentation": "https://github.com/chaosl1996/smart_pdu",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": ["@chaosl1996"],
+  "config_flow": true,
+  "iot_class": "local_polling"
+}

@@ -1,0 +1,34 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Smart PDU",
+        "description": "Home Assistant 将监听 TCP 端口，PDU 设备作为客户端接入（等同 Node-RED 中 tcp in 的 listen 模式）。请确保 PDU 服务器的目标地址指向本机 IP。",
+        "data": {
+          "port": "监听端口",
+          "update_interval": "轮询间隔（秒）",
+          "outlet_bit_order": "插座位序（io8/io 位掩码与插座号的对应关系）"
+        }
+      }
+    },
+    "error": {
+      "port_in_use": "端口已被占用（请检查 Node-RED 是否仍在监听该端口）",
+      "unknown": "未知错误"
+    },
+    "abort": {
+      "already_configured": "该端口已配置过"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Smart PDU 选项",
+        "data": {
+          "port": "监听端口",
+          "update_interval": "轮询间隔（秒）",
+          "outlet_bit_order": "插座位序"
+        }
+      }
+    }
+  }
+}
