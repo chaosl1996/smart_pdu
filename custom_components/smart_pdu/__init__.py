@@ -163,6 +163,12 @@ class PduHub:
             return 1 << (outlet - 1)
         return 1 << (NUM_OUTLETS - outlet)
 
+    def channel_index_for(self, outlet: int) -> int:
+        """插座序号 -> 电参数通道下标（c0~c7）。与位掩码同序：LSB 时 c0=插座1，MSB 时 c7=插座1。"""
+        if self.bit_order == BIT_ORDER_LSB:
+            return outlet - 1
+        return NUM_OUTLETS - outlet
+
     async def start(self) -> None:
         self._server = await asyncio.start_server(self._handle_client, "0.0.0.0", self.port)
         self._serve_task = self.hass.async_create_background_task(

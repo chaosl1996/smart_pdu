@@ -92,7 +92,7 @@ class PduOutletCurrentSensor(PduSensor):
         super().__init__(
             hub,
             entry,
-            f"c{outlet - 1}",
+            f"c{hub.channel_index_for(outlet)}",
             f"Outlet {outlet} Current",
             SensorDeviceClass.CURRENT,
             "A",
